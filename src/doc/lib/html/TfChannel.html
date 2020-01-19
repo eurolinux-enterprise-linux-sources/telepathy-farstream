@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TfChannel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="telepathy-farstream Reference Manual">
+<link rel="up" href="ch01.html" title="Telepathy Farstream Helper Classes">
+<link rel="prev" href="ch01.html" title="Telepathy Farstream Helper Classes">
+<link rel="next" href="TfContent.html" title="TfContent">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">telepathy-farstream Reference Manual</th>
+<td><a accesskey="n" href="TfContent.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#TfChannel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#TfChannel.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#TfChannel.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#TfChannel.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#TfChannel.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#TfChannel.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="TfChannel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="TfChannel.top_of_page"></a>TfChannel</span></h2>
+<p>TfChannel — Handle the MediaSignalling or Call media interfaces on a
+ Channel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="TfChannel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="TfChannel.html#TfChannel-struct" title="TfChannel">TfChannel</a>;
+<span class="returnvalue">void</span>                <a class="link" href="TfChannel.html#tf-channel-new-async" title="tf_channel_new_async ()">tf_channel_new_async</a>                (<em class="parameter"><code><span class="type">TpChannel</span> *channel_proxy</code></em>,
+                                                         <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+<a class="link" href="TfChannel.html" title="TfChannel"><span class="returnvalue">TfChannel</span></a> *         <a class="link" href="TfChannel.html#tf-channel-new-finish" title="tf_channel_new_finish ()">tf_channel_new_finish</a>               (<em class="parameter"><code><span class="type">GObject</span> *object</code></em>,
+                                                         <em class="parameter"><code><span class="type">GAsyncResult</span> *result</code></em>,
+                                                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="TfChannel.html#tf-channel-bus-message" title="tf_channel_bus_message ()">tf_channel_bus_message</a>              (<em class="parameter"><code><a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> *channel</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstMessage.html#GstMessage"><span class="type">GstMessage</span></a> *message</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfChannel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----TfChannel
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfChannel.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+TfChannel implements
+ GAsyncInitable.</p>
+</div>
+<div class="refsect1">
+<a name="TfChannel.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="TfChannel.html#TfChannel--channel" title='The "channel" property'>channel</a>"                  <span class="type">TpChannel</span>*            : Read / Write / Construct Only
+  "<a class="link" href="TfChannel.html#TfChannel--fs-conferences" title='The "fs-conferences" property'>fs-conferences</a>"           <span class="type">GPtrArray</span>*            : Read
+  "<a class="link" href="TfChannel.html#TfChannel--object-path" title='The "object-path" property'>object-path</a>"              <span class="type">gchar</span>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfChannel.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="TfChannel.html#TfChannel-closed" title='The "closed" signal'>closed</a>"                                         : <code class="literal">Run Last</code>
+  "<a class="link" href="TfChannel.html#TfChannel-content-added" title='The "content-added" signal'>content-added</a>"                                  : <code class="literal">Run Last</code>
+  "<a class="link" href="TfChannel.html#TfChannel-content-removed" title='The "content-removed" signal'>content-removed</a>"                                : <code class="literal">Run Last</code>
+  "<a class="link" href="TfChannel.html#TfChannel-fs-conference-added" title='The "fs-conference-added" signal'>fs-conference-added</a>"                            : <code class="literal">Run Last</code>
+  "<a class="link" href="TfChannel.html#TfChannel-fs-conference-removed" title='The "fs-conference-removed" signal'>fs-conference-removed</a>"                          : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfChannel.description"></a><h2>Description</h2>
+<p>
+This class handles the
+org.freedesktop.Telepathy.Channel.Interface.MediaSignalling on a
+channel using Farstream or the media part of the
+org.freedesktop.Telepathy.Channel.Type.Call that has HardwareStreaming=FALSE
+</p>
+</div>
+<div class="refsect1">
+<a name="TfChannel.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TfChannel-struct"></a><h3>TfChannel</h3>
+<pre class="programlisting">typedef struct _TfChannel TfChannel;</pre>
+<p>
+All members of the object are private
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-channel-new-async"></a><h3>tf_channel_new_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_channel_new_async                (<em class="parameter"><code><span class="type">TpChannel</span> *channel_proxy</code></em>,
+                                                         <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> from an existing channel proxy, the new
+TfChannel object will be return in the async callback.
+</p>
+<p>
+The user must call <a class="link" href="TfChannel.html#tf-channel-new-finish" title="tf_channel_new_finish ()"><code class="function">tf_channel_new_finish()</code></a> in the callback
+to get the finished object.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>channel_proxy</code></em> :</span></p></td>
+<td>a <span class="type">TpChannel</span> proxy</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>a <span class="type">GAsyncReadyCallback</span> to call when the channel is ready</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>the data to pass to callback function</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-channel-new-finish"></a><h3>tf_channel_new_finish ()</h3>
+<pre class="programlisting"><a class="link" href="TfChannel.html" title="TfChannel"><span class="returnvalue">TfChannel</span></a> *         tf_channel_new_finish               (<em class="parameter"><code><span class="type">GObject</span> *object</code></em>,
+                                                         <em class="parameter"><code><span class="type">GAsyncResult</span> *result</code></em>,
+                                                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>
+Completes the construction of a TfChannel.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>The <span class="type">GObject</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>result</code></em> :</span></p></td>
+<td>a <span class="type">GAsyncResult</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>the location of a <span class="type">GError</span> or <code class="literal">NULL</code> to ignore it</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> or <code class="literal">NULL</code> if there was an error</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-channel-bus-message"></a><h3>tf_channel_bus_message ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            tf_channel_bus_message              (<em class="parameter"><code><a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> *channel</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstMessage.html#GstMessage"><span class="type">GstMessage</span></a> *message</code></em>);</pre>
+<p>
+You must call this function on call messages received on the async bus.
+<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstMessage.html#GstMessage"><span class="type">GstMessages</span></a> are not modified.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>channel</code></em> :</span></p></td>
+<td>A <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>A <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstMessage.html#GstMessage"><span class="type">GstMessage</span></a> received from the bus</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the message has been handled, <code class="literal">FALSE</code> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="TfChannel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="TfChannel--channel"></a><h3>The <code class="literal">"channel"</code> property</h3>
+<pre class="programlisting">  "channel"                  <span class="type">TpChannel</span>*            : Read / Write / Construct Only</pre>
+<p>Telepathy channel object which this media channel should operate on.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfChannel--fs-conferences"></a><h3>The <code class="literal">"fs-conferences"</code> property</h3>
+<pre class="programlisting">  "fs-conferences"           <span class="type">GPtrArray</span>*            : Read</pre>
+<p>GPtrArray of Farstream FsConferences for this channel.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfChannel--object-path"></a><h3>The <code class="literal">"object-path"</code> property</h3>
+<pre class="programlisting">  "object-path"              <span class="type">gchar</span>*                : Read</pre>
+<p>D-Bus object path of the Telepathy channel which this channel operates on.</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="TfChannel.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="TfChannel-closed"></a><h3>The <code class="literal">"closed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> *arg0,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+This function is called after a channel is closed, either because
+it has been closed by the connection manager or because we had a locally
+generated error.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfChannel-content-added"></a><h3>The <code class="literal">"content-added"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> *tfchannel,
+                                                        <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Tells the application that a content has been added. In the callback for
+this signal, the application should set its preferred codecs, and hook
+up to any signal from <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> it cares about. Special care should be
+made to connect <a class="link" href="TfContent.html#TfContent-src-pad-added" title='The "src-pad-added" signal'><span class="type">"src-pad-added"</span></a> as well
+as the <a class="link" href="TfContent.html#TfContent-start-sending" title='The "start-sending" signal'><span class="type">"start-sending"</span></a> and <a class="link" href="TfContent.html#TfContent-stop-sending" title='The "stop-sending" signal'><span class="type">"stop-sending"</span></a> signals.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tfchannel</code></em> :</span></p></td>
+<td>the <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfChannel-content-removed"></a><h3>The <code class="literal">"content-removed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> *tfchannel,
+                                                        <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Tells the application that a content is being removed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tfchannel</code></em> :</span></p></td>
+<td>the <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfChannel-fs-conference-added"></a><h3>The <code class="literal">"fs-conference-added"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>    *tfchannel,
+                                                        <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsConference.html"><span class="type">FsConference</span></a> *conf,
+                                                        <span class="type">gpointer</span>      user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+When this signal is emitted, the conference should be added to the
+application's pipeline.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tfchannel</code></em> :</span></p></td>
+<td>the <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>conf</code></em> :</span></p></td>
+<td>a <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsConference.html"><span class="type">FsConference</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfChannel-fs-conference-removed"></a><h3>The <code class="literal">"fs-conference-removed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>    *tfchannel,
+                                                        <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsConference.html"><span class="type">FsConference</span></a> *conf,
+                                                        <span class="type">gpointer</span>      user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+When this signal is emitted, the conference should be remove from the
+application's pipeline.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tfchannel</code></em> :</span></p></td>
+<td>the <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>conf</code></em> :</span></p></td>
+<td>a <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsConference.html"><span class="type">FsConference</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

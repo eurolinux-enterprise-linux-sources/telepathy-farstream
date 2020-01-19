@@ -1,0 +1,188 @@
+<!-- ##### SECTION Title ##### -->
+TfContent
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TfContent ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL TfContent::restart-source ##### -->
+<para>
+
+</para>
+
+@tfcontent: the object which received the signal.
+
+<!-- ##### SIGNAL TfContent::src-pad-added ##### -->
+<para>
+
+</para>
+
+@tfcontent: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+@arg4: 
+
+<!-- ##### SIGNAL TfContent::start-receiving ##### -->
+<para>
+
+</para>
+
+@tfcontent: the object which received the signal.
+@arg1: 
+@arg2: 
+@Returns: 
+
+<!-- ##### SIGNAL TfContent::start-sending ##### -->
+<para>
+
+</para>
+
+@tfcontent: the object which received the signal.
+@Returns: 
+
+<!-- ##### SIGNAL TfContent::stop-receiving ##### -->
+<para>
+
+</para>
+
+@tfcontent: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL TfContent::stop-sending ##### -->
+<para>
+
+</para>
+
+@tfcontent: the object which received the signal.
+
+<!-- ##### ARG TfContent:fs-conference ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfContent:fs-session ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfContent:media-type ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfContent:object-path ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfContent:sink-pad ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfContent:tf-channel ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT TfContentClass ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION tf_content_iterate_src_pads ##### -->
+<para>
+
+</para>
+
+@content: 
+@handles: 
+@handle_count: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tf_content_error ##### -->
+<para>
+
+</para>
+
+@content: 
+@message_format: 
+@...: 
+
+
+<!-- ##### FUNCTION tf_content_error_literal ##### -->
+<para>
+
+</para>
+
+@content: 
+@message: 
+
+
+<!-- ##### FUNCTION tf_content_receiving_failed ##### -->
+<para>
+
+</para>
+
+@content: 
+@handles: 
+@handle_count: 
+@message_format: 
+@...: 
+
+
+<!-- ##### FUNCTION tf_content_receiving_failed_literal ##### -->
+<para>
+
+</para>
+
+@content: 
+@handles: 
+@handle_count: 
+@message: 
+
+
+<!-- ##### FUNCTION tf_content_sending_failed ##### -->
+<para>
+
+</para>
+
+@content: 
+@message_format: 
+@...: 
+
+
+<!-- ##### FUNCTION tf_content_sending_failed_literal ##### -->
+<para>
+
+</para>
+
+@content: 
+@message: 
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="telepathy-farstream Reference Manual" link="index.html" author="" name="telepathy-farstream" version="2" language="c">
+  <chapters>
+    <sub name="Telepathy Farstream Helper Classes" link="ch01.html">
+      <sub name="TfChannel" link="TfChannel.html"/>
+      <sub name="TfContent" link="TfContent.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="TfChannel" link="TfChannel.html#TfChannel-struct"/>
+    <keyword type="function" name="tf_channel_new_async ()" link="TfChannel.html#tf-channel-new-async"/>
+    <keyword type="function" name="tf_channel_new_finish ()" link="TfChannel.html#tf-channel-new-finish" since="0.2.2"/>
+    <keyword type="function" name="tf_channel_bus_message ()" link="TfChannel.html#tf-channel-bus-message"/>
+    <keyword type="property" name="The &quot;channel&quot; property" link="TfChannel.html#TfChannel--channel"/>
+    <keyword type="property" name="The &quot;fs-conferences&quot; property" link="TfChannel.html#TfChannel--fs-conferences"/>
+    <keyword type="property" name="The &quot;object-path&quot; property" link="TfChannel.html#TfChannel--object-path"/>
+    <keyword type="signal" name="The &quot;closed&quot; signal" link="TfChannel.html#TfChannel-closed"/>
+    <keyword type="signal" name="The &quot;content-added&quot; signal" link="TfChannel.html#TfChannel-content-added"/>
+    <keyword type="signal" name="The &quot;content-removed&quot; signal" link="TfChannel.html#TfChannel-content-removed"/>
+    <keyword type="signal" name="The &quot;fs-conference-added&quot; signal" link="TfChannel.html#TfChannel-fs-conference-added"/>
+    <keyword type="signal" name="The &quot;fs-conference-removed&quot; signal" link="TfChannel.html#TfChannel-fs-conference-removed"/>
+    <keyword type="struct" name="TfContent" link="TfContent.html#TfContent-struct"/>
+    <keyword type="struct" name="TfContentClass" link="TfContent.html#TfContentClass"/>
+    <keyword type="function" name="tf_content_iterate_src_pads ()" link="TfContent.html#tf-content-iterate-src-pads"/>
+    <keyword type="function" name="tf_content_error ()" link="TfContent.html#tf-content-error"/>
+    <keyword type="function" name="tf_content_error_literal ()" link="TfContent.html#tf-content-error-literal"/>
+    <keyword type="function" name="tf_content_receiving_failed ()" link="TfContent.html#tf-content-receiving-failed"/>
+    <keyword type="function" name="tf_content_receiving_failed_literal ()" link="TfContent.html#tf-content-receiving-failed-literal"/>
+    <keyword type="function" name="tf_content_sending_failed ()" link="TfContent.html#tf-content-sending-failed"/>
+    <keyword type="function" name="tf_content_sending_failed_literal ()" link="TfContent.html#tf-content-sending-failed-literal"/>
+    <keyword type="property" name="The &quot;fs-conference&quot; property" link="TfContent.html#TfContent--fs-conference"/>
+    <keyword type="property" name="The &quot;fs-session&quot; property" link="TfContent.html#TfContent--fs-session"/>
+    <keyword type="property" name="The &quot;media-type&quot; property" link="TfContent.html#TfContent--media-type"/>
+    <keyword type="property" name="The &quot;object-path&quot; property" link="TfContent.html#TfContent--object-path"/>
+    <keyword type="property" name="The &quot;sink-pad&quot; property" link="TfContent.html#TfContent--sink-pad"/>
+    <keyword type="property" name="The &quot;tf-channel&quot; property" link="TfContent.html#TfContent--tf-channel"/>
+    <keyword type="signal" name="The &quot;restart-source&quot; signal" link="TfContent.html#TfContent-restart-source"/>
+    <keyword type="signal" name="The &quot;src-pad-added&quot; signal" link="TfContent.html#TfContent-src-pad-added"/>
+    <keyword type="signal" name="The &quot;start-receiving&quot; signal" link="TfContent.html#TfContent-start-receiving"/>
+    <keyword type="signal" name="The &quot;start-sending&quot; signal" link="TfContent.html#TfContent-start-sending"/>
+    <keyword type="signal" name="The &quot;stop-receiving&quot; signal" link="TfContent.html#TfContent-stop-receiving"/>
+    <keyword type="signal" name="The &quot;stop-sending&quot; signal" link="TfContent.html#TfContent-stop-sending"/>
+  </functions>
+</book>

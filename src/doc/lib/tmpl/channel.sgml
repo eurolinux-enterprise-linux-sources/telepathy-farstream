@@ -1,0 +1,113 @@
+<!-- ##### SECTION Title ##### -->
+TfChannel
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TfChannel ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL TfChannel::closed ##### -->
+<para>
+
+</para>
+
+@tfchannel: the object which received the signal.
+
+<!-- ##### SIGNAL TfChannel::content-added ##### -->
+<para>
+
+</para>
+
+@tfchannel: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TfChannel::content-removed ##### -->
+<para>
+
+</para>
+
+@tfchannel: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TfChannel::fs-conference-added ##### -->
+<para>
+
+</para>
+
+@tfchannel: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TfChannel::fs-conference-removed ##### -->
+<para>
+
+</para>
+
+@tfchannel: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG TfChannel:channel ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfChannel:fs-conferences ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TfChannel:object-path ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION tf_channel_new_async ##### -->
+<para>
+
+</para>
+
+@channel_proxy: 
+@callback: 
+@user_data: 
+
+
+<!-- ##### FUNCTION tf_channel_new_finish ##### -->
+<para>
+
+</para>
+
+@object: 
+@result: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tf_channel_bus_message ##### -->
+<para>
+
+</para>
+
+@channel: 
+@message: 
+@Returns: 
+
+

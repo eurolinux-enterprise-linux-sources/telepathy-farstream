@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TfContent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="telepathy-farstream Reference Manual">
+<link rel="up" href="ch01.html" title="Telepathy Farstream Helper Classes">
+<link rel="prev" href="TfChannel.html" title="TfChannel">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="TfChannel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">telepathy-farstream Reference Manual</th>
+<td> </td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#TfContent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#TfContent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#TfContent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#TfContent.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#TfContent.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="TfContent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="TfContent.top_of_page"></a>TfContent</span></h2>
+<p>TfContent — Represent the Content of a channel handled by <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="TfContent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="TfContent.html#TfContent-struct" title="TfContent">TfContent</a>;
+                    <a class="link" href="TfContent.html#TfContentClass" title="TfContentClass">TfContentClass</a>;
+<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstIterator.html#GstIterator"><span class="returnvalue">GstIterator</span></a> *       <a class="link" href="TfContent.html#tf-content-iterate-src-pads" title="tf_content_iterate_src_pads ()">tf_content_iterate_src_pads</a>         (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> *handles</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> handle_count</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TfContent.html#tf-content-error" title="tf_content_error ()">tf_content_error</a>                    (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message_format</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TfContent.html#tf-content-error-literal" title="tf_content_error_literal ()">tf_content_error_literal</a>            (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TfContent.html#tf-content-receiving-failed" title="tf_content_receiving_failed ()">tf_content_receiving_failed</a>         (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> *handles</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> handle_count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message_format</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TfContent.html#tf-content-receiving-failed-literal" title="tf_content_receiving_failed_literal ()">tf_content_receiving_failed_literal</a> (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> *handles</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> handle_count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TfContent.html#tf-content-sending-failed" title="tf_content_sending_failed ()">tf_content_sending_failed</a>           (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message_format</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TfContent.html#tf-content-sending-failed-literal" title="tf_content_sending_failed_literal ()">tf_content_sending_failed_literal</a>   (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfContent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----TfContent
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfContent.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="TfContent.html#TfContent--fs-conference" title='The "fs-conference" property'>fs-conference</a>"            <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsConference.html"><span class="type">FsConference</span></a>*         : Read
+  "<a class="link" href="TfContent.html#TfContent--fs-session" title='The "fs-session" property'>fs-session</a>"               <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsSession.html"><span class="type">FsSession</span></a>*            : Read
+  "<a class="link" href="TfContent.html#TfContent--media-type" title='The "media-type" property'>media-type</a>"               <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/farstream-libs-FsCodec.html#FsMediaType"><span class="type">FsMediaType</span></a>           : Read
+  "<a class="link" href="TfContent.html#TfContent--object-path" title='The "object-path" property'>object-path</a>"              <span class="type">gchar</span>*                : Read
+  "<a class="link" href="TfContent.html#TfContent--sink-pad" title='The "sink-pad" property'>sink-pad</a>"                 <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/GstPad.html"><span class="type">GstPad</span></a>*               : Read
+  "<a class="link" href="TfContent.html#TfContent--tf-channel" title='The "tf-channel" property'>tf-channel</a>"               <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>*            : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfContent.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="TfContent.html#TfContent-restart-source" title='The "restart-source" signal'>restart-source</a>"                                 : <code class="literal">Run Last</code>
+  "<a class="link" href="TfContent.html#TfContent-src-pad-added" title='The "src-pad-added" signal'>src-pad-added</a>"                                  : <code class="literal">Run Last</code>
+  "<a class="link" href="TfContent.html#TfContent-start-receiving" title='The "start-receiving" signal'>start-receiving</a>"                                : <code class="literal">Run Last</code>
+  "<a class="link" href="TfContent.html#TfContent-start-sending" title='The "start-sending" signal'>start-sending</a>"                                  : <code class="literal">Run Last</code>
+  "<a class="link" href="TfContent.html#TfContent-stop-receiving" title='The "stop-receiving" signal'>stop-receiving</a>"                                 : <code class="literal">Run Last</code>
+  "<a class="link" href="TfContent.html#TfContent-stop-sending" title='The "stop-sending" signal'>stop-sending</a>"                                   : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="TfContent.description"></a><h2>Description</h2>
+<p>
+Objects of this class allow the user to handle the media side of a Telepathy
+channel handled by <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>.
+</p>
+<p>
+This object is created by the <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a> and the user is notified
+of its creation by the <a class="link" href="TfChannel.html#TfChannel-content-added" title='The "content-added" signal'><span class="type">"content-added"</span></a> signal. In the
+callback for this signal, the user should connect to the
+<a class="link" href="TfContent.html#TfContent-src-pad-added" title='The "src-pad-added" signal'><span class="type">"src-pad-added"</span></a> signal.
+</p>
+</div>
+<div class="refsect1">
+<a name="TfContent.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TfContent-struct"></a><h3>TfContent</h3>
+<pre class="programlisting">typedef struct _TfContent TfContent;</pre>
+<p>
+This structure is private, this class is not subclassable.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContentClass"></a><h3>TfContentClass</h3>
+<pre class="programlisting">typedef struct _TfContentClass TfContentClass;</pre>
+<p>
+This structure is private, this class is not subclassable.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-iterate-src-pads"></a><h3>tf_content_iterate_src_pads ()</h3>
+<pre class="programlisting"><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstIterator.html#GstIterator"><span class="returnvalue">GstIterator</span></a> *       tf_content_iterate_src_pads         (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> *handles</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> handle_count</code></em>);</pre>
+<p>
+Provides a iterator that can be used to iterate through all of the src
+pads that are are used to receive from a group of Telepathy handles.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handles</code></em> :</span></p></td>
+<td>a 0 terminated array of <span class="type">guint</span> representing Telepathy handles</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle_count</code></em> :</span></p></td>
+<td>the numner of handles in <em class="parameter"><code>handles</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstIterator.html#GstIterator"><span class="type">GstIterator</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-error"></a><h3>tf_content_error ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_content_error                    (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message_format</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+Send a fatal streaming error to the Content to the CM, the effect is most
+likely that the content will be removed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message_format</code></em> :</span></p></td>
+<td>error Message with printf style formatting</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>Parameters to insert into the <em class="parameter"><code>message_format</code></em> string</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-error-literal"></a><h3>tf_content_error_literal ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_content_error_literal            (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);</pre>
+<p>
+Send a fatal streaming error to the Content to the CM, the effect is most
+likely that the content will be removed.
+</p>
+<p>
+Rename to: tf_content_error
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>error Message</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-receiving-failed"></a><h3>tf_content_receiving_failed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_content_receiving_failed         (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> *handles</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> handle_count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message_format</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+Informs the Connection Manager that receiving has failed for this
+content. This is a transient error and it may or not not end the Content
+and the call.
+</p>
+<p>
+If handles are not specific, it assumes that it is valid for all handles.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handles</code></em> :</span></p></td>
+<td>an array of <span class="type">guint</span> representing Telepathy handles, may be <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle_count</code></em> :</span></p></td>
+<td>the numner of handles in <em class="parameter"><code>handles</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message_format</code></em> :</span></p></td>
+<td>Message with printf style formatting</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>Parameters to insert into the <em class="parameter"><code>message_format</code></em> string</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-receiving-failed-literal"></a><h3>tf_content_receiving_failed_literal ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_content_receiving_failed_literal (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> *handles</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> handle_count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);</pre>
+<p>
+Informs the Connection Manager that receiving has failed for this
+content. This is a transient error and it may or not not end the Content
+and the call.
+</p>
+<p>
+If handles are not specific, it assumes that it is valid for all handles.
+</p>
+<p>
+Rename to: tf_content_receiving_failed
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handles</code></em> :</span></p></td>
+<td>an array of <span class="type">guint</span> representing Telepathy handles, may be <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle_count</code></em> :</span></p></td>
+<td>the numner of handles in <em class="parameter"><code>handles</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>The error message</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-sending-failed"></a><h3>tf_content_sending_failed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_content_sending_failed           (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message_format</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+Informs the Connection Manager that sending has failed for this
+content. This is a transient error and it may or not not end the Content
+and the call.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message_format</code></em> :</span></p></td>
+<td>Message with printf style formatting</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>Parameters to insert into the <em class="parameter"><code>message_format</code></em> string</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tf-content-sending-failed-literal"></a><h3>tf_content_sending_failed_literal ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tf_content_sending_failed_literal   (<em class="parameter"><code><a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);</pre>
+<p>
+Informs the Connection Manager that sending has failed for this
+content. This is a transient error and it may or not not end the Content
+and the call.
+</p>
+<p>
+Rename to: tf_content_sending_failed
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>The error message</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="TfContent.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="TfContent--fs-conference"></a><h3>The <code class="literal">"fs-conference"</code> property</h3>
+<pre class="programlisting">  "fs-conference"            <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsConference.html"><span class="type">FsConference</span></a>*         : Read</pre>
+<p>The Farstream conference for this content (could be the same as other contents).</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent--fs-session"></a><h3>The <code class="literal">"fs-session"</code> property</h3>
+<pre class="programlisting">  "fs-session"               <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsSession.html"><span class="type">FsSession</span></a>*            : Read</pre>
+<p>The Farstream session for this content.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent--media-type"></a><h3>The <code class="literal">"media-type"</code> property</h3>
+<pre class="programlisting">  "media-type"               <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/farstream-libs-FsCodec.html#FsMediaType"><span class="type">FsMediaType</span></a>           : Read</pre>
+<p>The FsMediaType for this content.</p>
+<p>Default value: FS_MEDIA_TYPE_AUDIO</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent--object-path"></a><h3>The <code class="literal">"object-path"</code> property</h3>
+<pre class="programlisting">  "object-path"              <span class="type">gchar</span>*                : Read</pre>
+<p>D-Bus object path of the Telepathy content which this content operates on.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent--sink-pad"></a><h3>The <code class="literal">"sink-pad"</code> property</h3>
+<pre class="programlisting">  "sink-pad"                 <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/GstPad.html"><span class="type">GstPad</span></a>*               : Read</pre>
+<p>Sink GstPad for this content.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent--tf-channel"></a><h3>The <code class="literal">"tf-channel"</code> property</h3>
+<pre class="programlisting">  "tf-channel"               <a class="link" href="TfChannel.html" title="TfChannel"><span class="type">TfChannel</span></a>*            : Read</pre>
+<p>The Telepathy-Farstream Channel for this object.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="TfContent.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="TfContent-restart-source"></a><h3>The <code class="literal">"restart-source"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+This signal requests that the source be restarted so that the caps can
+be renegotiated with a new resolutions and framerate.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent-src-pad-added"></a><h3>The <code class="literal">"src-pad-added"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">guint</span>      handle,
+                                                        <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsStream.html"><span class="type">FsStream</span></a>  *stream,
+                                                        <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/GstPad.html"><span class="type">GstPad</span></a>    *pad,
+                                                        <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/farstream-libs-FsCodec.html#FsCodec"><span class="type">FsCodec</span></a>   *codec,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when a data is coming on a new pad. This signal
+is not emitted on the main thread, so special care must be made to lock
+the relevant data. When the callback returns from this signal, data will
+start flowing through the pad, so the application MUST connect a sink.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>the handle of the remote party producing the content on this pad
+or 0 if unknown</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stream</code></em> :</span></p></td>
+<td>the <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/FsStream.html"><span class="type">FsStream</span></a> for this pad</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pad</code></em> :</span></p></td>
+<td>a <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/GstPad.html"><span class="type">GstPad</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>codec</code></em> :</span></p></td>
+<td>the <a href="http://www.freedesktop.org/software/farstream/apidoc/farstream/farstream-libs-FsCodec.html#FsCodec"><span class="type">FsCodec</span></a> for this pad</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent-start-receiving"></a><h3>The <code class="literal">"start-receiving"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   handles,
+                                                        <span class="type">guint</span>      handle_count,
+                                                        <span class="type">gpointer</span>   user_data)         : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when the connection managers requests that the
+application prepares itself to start receiving data again from certain
+handles.
+</p>
+<p>
+This signal will only be emitted after the <a class="link" href="TfContent.html#TfContent-stop-receiving" title='The "stop-receiving" signal'><span class="type">"stop-receiving"</span></a>
+signal has succeeded. It will not be emitted right after
+ <a class="link" href="TfContent.html#TfContent-src-pad-added" title='The "src-pad-added" signal'><span class="type">"src-pad-added"</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handles</code></em> :</span></p></td>
+<td>a 0-terminated array of <span class="type">guint</span> containing the handles</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle_count</code></em> :</span></p></td>
+<td>The number of handles in the <em class="parameter"><code>handles</code></em> array</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the application can start receiving data or <code class="literal">FALSE</code>
+otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent-start-sending"></a><h3>The <code class="literal">"start-sending"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when the connection manager ask to send media.
+For example, this can be used to open a camera, start recording from a
+microphone or play back a file. The application should start
+sending data on the <a class="link" href="TfContent.html#TfContent--sink-pad" title='The "sink-pad" property'><span class="type">"sink-pad"</span></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the application can start providing data or <code class="literal">FALSE</code>
+otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent-stop-receiving"></a><h3>The <code class="literal">"stop-receiving"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   handles,
+                                                        <span class="type">guint</span>      handle_count,
+                                                        <span class="type">gpointer</span>   user_data)         : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when the connection manager wants to tell the
+application that it is now allowed to stop receiving.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handles</code></em> :</span></p></td>
+<td>a 0-terminated array of <span class="type">guint</span> containing the handles</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle_count</code></em> :</span></p></td>
+<td>The number of handles in the <em class="parameter"><code>handles</code></em> array</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TfContent-stop-sending"></a><h3>The <code class="literal">"stop-sending"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a> *content,
+                                                        <span class="type">gpointer</span>   user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when the connection manager ask to stop
+sending media
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the <a class="link" href="TfContent.html" title="TfContent"><span class="type">TfContent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>
